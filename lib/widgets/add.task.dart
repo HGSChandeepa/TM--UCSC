@@ -23,7 +23,8 @@ class _AddNewExpencceState extends State<AddNewExpencce> {
   final DateTime initialDate = DateTime.now();
   final DateTime firstDate = DateTime(
       DateTime.now().year - 1, DateTime.now().month, DateTime.now().day);
-  final DateTime lastDate = DateTime.now();
+  final DateTime lastDate = DateTime(
+      DateTime.now().year + 1, DateTime.now().month, DateTime.now().day);
 
   //opendate modal
   Future<void> _openDateModal() async {

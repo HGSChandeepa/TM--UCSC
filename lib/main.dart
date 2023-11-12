@@ -1,3 +1,4 @@
+import 'package:expence_tracker_app/models/task.dart';
 import 'package:expence_tracker_app/pages/task_manager.dart';
 import 'package:expence_tracker_app/server/categories.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 void main() async {
   //init hive
   await Hive.initFlutter();
+  Hive.registerAdapter(ExpenceModelAdapter());
   Hive.registerAdapter(CategoryAdapter());
 
   await Hive.openBox("expenceDatabase");
